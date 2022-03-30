@@ -9,6 +9,14 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Student student1 = new Student("Marius", "Winf");
+        WG wg1 = new WG();
+
+        wg1.addStudent(student1);
+        
+        
+        
+        System.out.println(wg1.getWohnende());
+
     }
 }
