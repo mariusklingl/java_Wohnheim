@@ -14,6 +14,7 @@ public class WG {
 
     public WG(int maxAnzahl){
         this.maxAnzahl = maxAnzahl;
+        listeStudenten = new ArrayList<Student>();
     }
 
    

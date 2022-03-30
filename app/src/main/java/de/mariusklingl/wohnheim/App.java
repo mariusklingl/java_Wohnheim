@@ -3,6 +3,8 @@
  */
 package de.mariusklingl.wohnheim;
 
+import java.util.ArrayList;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,10 +12,30 @@ public class App {
 
     public static void main(String[] args) {
         Student student1 = new Student("Marius", "Winf");
-        WG wg1 = new WG();
+        Student student2 = new Student("rre", "Winf");
+        Student student3 = new Student("Marreerggius", "Winf");
+        Student student4 = new Student("Marirgertregrtterus", "Winf");
+        Student student5 = new Student("uuuuu", "Winf");
+        Student student6 = new Student("22222", "Winf");
+        WG wg1 = new WG(2);
+        WG wg2 = new WG(3);
 
         wg1.addStudent(student1);
+        wg1.addStudent(student2);
+
+        wg2.addStudent(student3);
+        wg2.addStudent(student4);
+        wg2.addStudent(student5);
+        wg2.addStudent(student6);
+
+        ArrayList<WG> listeallerWgs = new ArrayList<>();
+        listeallerWgs.add(wg1);
+        listeallerWgs.add(wg2);
+
+        Wohnheim wohnheim1 = new Wohnheim(listeallerWgs);
+        System.out.println(wohnheim1.getAlleWohnenden());
         
+
         
         
         System.out.println(wg1.getWohnende());
